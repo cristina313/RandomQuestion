@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RandomQuestion.Classes.DataManagement;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -8,14 +9,19 @@ using System.Threading.Tasks;
 
 namespace RandomQuestion.Classes
 {
-    public class FileManager
+    public class FileManager: IDataManager
     {
-        public static ArrayList ReadFromFile(string path)
+        IFileSettings settings;
+        public FileManager(IFileSettings settings)
+        {
+            this.settings = settings;
+        }
+        public ArrayList ReadQuestions()
         {
             try
             {
                 var resultArrayList = new ArrayList();
-                resultArrayList.AddRange(File.ReadAllLines(path));
+                resultArrayList.AddRange(File.ReadAllLines(settings.Path));
                 return resultArrayList;
             }
             catch (Exception ex)
