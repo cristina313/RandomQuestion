@@ -29,10 +29,14 @@ namespace RandomQuestion
         ArrayList shuffledQuestions;
         int currentQ;
         private static BackgroundWorker backgroundWorker;
+        private IDataManager dataManager;
         public MainWindow()
         {
             InitializeComponent();
+            var databaseSettings = new DatabaseSettings();
+            dataManager = new DatabaseManager(databaseSettings);
             Init();
+            
             backgroundWorker = new BackgroundWorker
             {
                 WorkerReportsProgress = true,
@@ -82,7 +86,7 @@ namespace RandomQuestion
         {
             try
             {
-                var gotQuestions = FileManager.ReadFromFile(@"MyQuestions.txt");
+                var gotQuestions = dataManager.ReadQuestions();
                 shuffledQuestions = ShuffleManager.Shuffle(gotQuestions);
             }
             catch (Exception ex)
