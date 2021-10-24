@@ -124,5 +124,10 @@ namespace RandomQuestion
             Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath("Opacity"));
             storyBoard.Begin(label);
         }
+
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
