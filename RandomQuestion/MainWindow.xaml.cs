@@ -1,4 +1,5 @@
 ﻿using RandomQuestion.Classes;
+using Serilog;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -30,21 +31,35 @@ namespace RandomQuestion
         int currentQ;
         private static BackgroundWorker backgroundWorker;
         private IDataManager dataManager;
+        private readonly ILogger logger;
+
         public MainWindow()
         {
-            InitializeComponent();
             var databaseSettings = new DatabaseSettings();
-            dataManager = new DatabaseManager(databaseSettings);
-            Init();
-            
-            backgroundWorker = new BackgroundWorker
+            logger = new LoggerConfiguration()
+                .WriteTo.MongoDB(databaseSettings.ConnectionString)
+                .CreateLogger();
+
+            try
             {
-                WorkerReportsProgress = true,
-                WorkerSupportsCancellation = true
-            };
-            backgroundWorker.DoWork += backgroundWorker_DoWork;
-            backgroundWorker.ProgressChanged += backgroundWorker_ProgressChanged;
-            backgroundWorker.RunWorkerCompleted += backgroundWorker_RunWorkerCompleted;
+                InitializeComponent();
+                dataManager = new DatabaseManager(databaseSettings);
+
+                Init();
+
+                backgroundWorker = new BackgroundWorker
+                {
+                    WorkerReportsProgress = true,
+                    WorkerSupportsCancellation = true
+                };
+                backgroundWorker.DoWork += backgroundWorker_DoWork;
+                backgroundWorker.ProgressChanged += backgroundWorker_ProgressChanged;
+                backgroundWorker.RunWorkerCompleted += backgroundWorker_RunWorkerCompleted;
+            } 
+            catch (Exception ex)
+            {
+                logger.Error($"Uncaught exceptions was thrown. Message: {ex.Message}");
+            }
         }
 
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -86,12 +101,15 @@ namespace RandomQuestion
         {
             try
             {
+                logger.Information("Trying to read questions...");
                 var gotQuestions = dataManager.ReadQuestions();
                 shuffledQuestions = ShuffleManager.Shuffle(gotQuestions);
+                logger.Information($"{gotQuestions.Count} questions were read!");
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ioi no'! Sigur ai pus fisieru' unde trăbă? Uită ni ce zice programu': {ex.Message}","Mesaj de baraj",MessageBoxButton.OK,MessageBoxImage.Exclamation);
+                logger.Error($"Question read error. Message: {ex.Message}");
             }
         }
 
@@ -100,6 +118,7 @@ namespace RandomQuestion
             if (shuffledQuestions == null) 
             {
                 MessageBox.Show("Apăi nicio întrebare nu s-o loadat! Verifică te rog amu' fișieru' cu întrebări!");
+                logger.Error("Get next question button was pressed, but questions were not previously loaded!");
                 return;
             }
 
