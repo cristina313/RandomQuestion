@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RandomQuestion"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="Random Question" ResizeMode="NoResize" Height="820" Width="1300">
     <Grid Margin="0,0,0.4,-3.4">
         <Grid.Background>
@@ -33,6 +34,8 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
+        <Button x:Name="closeButton" Content="Close" HorizontalAlignment="Left" Height="48" Margin="1229.6,0,0,0" VerticalAlignment="Top" Width="70" Background="#FFF11010" Click="closeButton_Click" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Random Question" HorizontalAlignment="Left" Height="144" Margin="372,116,0,0" VerticalAlignment="Top" Width="746.2" FontSize="70" FontWeight="Bold" FontFamily="Comic Sans MS" Background="#00000000"/>
 
     </Grid>
 </Window>
