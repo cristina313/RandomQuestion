@@ -1,8 +1,11 @@
 ﻿using RandomQuestion.Classes;
+using RandomQuestion.Models;
 using Serilog;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
@@ -89,8 +92,17 @@ namespace RandomQuestion
         {
             try
             {
+                IEnumerable < Question > questions = new List<Question>()
+                {
+                    new Question() {Text = "DSSDFS"},
+                    new Question() {Text = "DSSDFS"}
+                };
+
+                ArrayList list = (ArrayList)questions.Select(q => q.Text);
+
                 logger.Information("Trying to read questions...");
                 var gotQuestions = dataManager.ReadQuestions();
+                lblQuestion.Text = "Hit that button :>";
 
                 if(gotQuestions.Count == 0)
                 {
@@ -99,7 +111,6 @@ namespace RandomQuestion
                 }
 
                 shuffledQuestions = ShuffleManager.Shuffle(gotQuestions);
-                lblQuestion.Text = "Hit that button :>";
                 logger.Information($"{gotQuestions.Count} questions were read!");
             }
             catch (Exception ex)
