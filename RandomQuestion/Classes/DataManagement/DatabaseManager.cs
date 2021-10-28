@@ -1,14 +1,8 @@
-﻿using MongoDB.Bson;
-using MongoDB.Driver;
-using Newtonsoft.Json;
+﻿using MongoDB.Driver;
 using RandomQuestion.Models;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RandomQuestion.Classes
 {
@@ -17,8 +11,9 @@ namespace RandomQuestion.Classes
         IDatabaseSettings settings;
         public DatabaseManager(IDatabaseSettings settings)
         {
-            this.settings = settings; 
+            this.settings = settings;
         }
+
         public ArrayList ReadQuestions()
         {
             try
@@ -26,14 +21,24 @@ namespace RandomQuestion.Classes
                 var client = new MongoClient(MongoClientSettings.FromConnectionString(settings.ConnectionString));
                 var database = client.GetDatabase(settings.DatabaseName);
                 var questions = database.GetCollection<QuestionList>(settings.ResourceQuestionsCollectionName);
-                QuestionList questionList = questions.Find(question => true).FirstOrDefault();
-                
-                var resultArrayList = new ArrayList();
-                foreach (var question in questionList.Questions)
+
+                if (questions == null)
                 {
-                    resultArrayList.Add(question.Text);
+                    database.CreateCollection(settings.ResourceQuestionsCollectionName);
+                    questions = database.GetCollection<QuestionList>(settings.ResourceQuestionsCollectionName);
                 }
 
+                QuestionList questionList = questions.Find(question => true).FirstOrDefault();
+
+                var resultArrayList = new ArrayList();
+                if (questionList != null)
+                {
+                    foreach (var question in questionList.Questions)
+                    {
+                        resultArrayList.Add(question.Text);
+                    }
+
+                }
                 return resultArrayList;
             }
             catch (Exception ex)

@@ -1,21 +1,19 @@
 ﻿using RandomQuestion.Classes.DataManagement;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RandomQuestion.Classes
 {
     public class FileManager: IDataManager
     {
         IFileSettings settings;
+
         public FileManager(IFileSettings settings)
         {
             this.settings = settings;
         }
+
         public ArrayList ReadQuestions()
         {
             try
