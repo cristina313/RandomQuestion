@@ -1,24 +1,15 @@
 ﻿using RandomQuestion.Classes;
+using RandomQuestion.Models;
 using Serilog;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Windows.Threading;
 
 namespace RandomQuestion
 {
@@ -101,8 +92,24 @@ namespace RandomQuestion
         {
             try
             {
+                IEnumerable < Question > questions = new List<Question>()
+                {
+                    new Question() {Text = "DSSDFS"},
+                    new Question() {Text = "DSSDFS"}
+                };
+
+                ArrayList list = (ArrayList)questions.Select(q => q.Text);
+
                 logger.Information("Trying to read questions...");
                 var gotQuestions = dataManager.ReadQuestions();
+                lblQuestion.Text = "Hit that button :>";
+
+                if(gotQuestions.Count == 0)
+                {
+                    MessageBox.Show($"Auleu! Bagî șî tu niști întrebări la baza di dati!", "Mesaj de baraj", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                    return;
+                }
+
                 shuffledQuestions = ShuffleManager.Shuffle(gotQuestions);
                 logger.Information($"{gotQuestions.Count} questions were read!");
             }

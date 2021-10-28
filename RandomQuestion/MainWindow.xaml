@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RandomQuestion"
         mc:Ignorable="d"
         WindowStyle="None"
-        Title="Random Question" ResizeMode="NoResize" Height="820" Width="1300">
+        Title="Random Question" ResizeMode="CanResize" Height="820" Width="1300">
     <Grid Margin="0,0,0.4,-3.4">
         <Grid.Background>
             <ImageBrush ImageSource="QuestionBackground.png" Stretch="UniformToFill">
@@ -20,13 +20,21 @@
                 </ImageBrush.RelativeTransform>
             </ImageBrush>
         </Grid.Background>
-        <Label x:Name="lblMain" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,255.4,116.4" BorderBrush="Black" FontSize="24" FontWeight="Bold" Background="#FFFAFAFA" HorizontalAlignment="Right" Width="940" Height="111" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition  Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="lblMain" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontSize="24" FontWeight="Bold" Background="#FFFAFAFA" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" >
             <Label.Content>
                 <AccessText Name="lblQuestion" TextWrapping="Wrap"/>
             </Label.Content>
         </Label>
 
-        <Button x:Name="btnHit" Content="Hit me" Margin="0,0,99.4,116.4" FontSize="22" FontWeight="Bold" Click="btnHit_Click" Background="#FF2A2A71" Foreground="White" HorizontalAlignment="Right" Width="104" Height="111" VerticalAlignment="Bottom">
+        <Button x:Name="btnHit" Content="Hit me" FontSize="22" FontWeight="Bold" Click="btnHit_Click" Background="#FF2A2A71" Foreground="White" Padding="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FF868686" Offset="1"/>
@@ -34,8 +42,12 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="closeButton" Content="Close" HorizontalAlignment="Left" Height="48" Margin="1229.6,0,0,0" VerticalAlignment="Top" Width="70" Background="#FFF11010" Click="closeButton_Click" FontSize="22" FontWeight="Bold"/>
-        <Label Content="Random Question" HorizontalAlignment="Left" Height="144" Margin="372,116,0,0" VerticalAlignment="Top" Width="746.2" FontSize="70" FontWeight="Bold" FontFamily="Comic Sans MS" Background="#00000000"/>
+        <Button x:Name="closeButton" Content="Close" HorizontalAlignment="Right"  VerticalAlignment="Top" Background="#FFF11010" Click="closeButton_Click" FontSize="22" FontWeight="Bold" Grid.Column="1" Grid.Row="0" Padding="10"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Bottom"  FontSize="70" FontWeight="Bold"  FontFamily="Comic Sans MS" Background="#00000000" Grid.Column="0" Grid.Row="0">
+            <Label.Content>
+                <AccessText Text="Random Question" TextWrapping="Wrap"/>
+            </Label.Content>
+        </Label>
 
     </Grid>
 </Window>
