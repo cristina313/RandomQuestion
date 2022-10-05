@@ -1,4 +1,5 @@
 ﻿using RandomQuestion.Classes;
+using RandomQuestion.Classes.DataManagement;
 using RandomQuestion.Models;
 using Serilog;
 using System;
@@ -27,14 +28,15 @@ namespace RandomQuestion
         public MainWindow()
         {
             var databaseSettings = new DatabaseSettings();
-            logger = new LoggerConfiguration()
+            var fileSetting = new FileSettings();
+           /* logger = new LoggerConfiguration()
                 .WriteTo.MongoDB(databaseSettings.ConnectionString)
-                .CreateLogger();
+                .CreateLogger();*/
 
             try
             {
                 InitializeComponent();
-                dataManager = new DatabaseManager(databaseSettings);
+                dataManager = new FileManager(fileSetting); //new DatabaseManager(databaseSettings);
 
                 Init();
 
@@ -49,7 +51,7 @@ namespace RandomQuestion
             } 
             catch (Exception ex)
             {
-                logger.Error($"Uncaught exceptions was thrown. Message: {ex.Message}");
+                logger?.Error($"Uncaught exceptions was thrown. Message: {ex.Message}");
             }
         }
 
@@ -92,15 +94,15 @@ namespace RandomQuestion
         {
             try
             {
-                IEnumerable < Question > questions = new List<Question>()
+                /*IEnumerable < Question > questions = new List<Question>()
                 {
                     new Question() {Text = "DSSDFS"},
                     new Question() {Text = "DSSDFS"}
                 };
 
                 ArrayList list = (ArrayList)questions.Select(q => q.Text);
-
-                logger.Information("Trying to read questions...");
+                */
+                logger?.Information("Trying to read questions...");
                 var gotQuestions = dataManager.ReadQuestions();
                 lblQuestion.Text = "Hit that button :>";
 
@@ -111,12 +113,12 @@ namespace RandomQuestion
                 }
 
                 shuffledQuestions = ShuffleManager.Shuffle(gotQuestions);
-                logger.Information($"{gotQuestions.Count} questions were read!");
+                logger?.Information($"{gotQuestions.Count} questions were read!");
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ioi no'! Sigur ai pus fisieru' unde trăbă? Uită ni ce zice programu': {ex.Message}","Mesaj de baraj",MessageBoxButton.OK,MessageBoxImage.Exclamation);
-                logger.Error($"Question read error. Message: {ex.Message}");
+                logger?.Error($"Question read error. Message: {ex.Message}");
             }
         }
 
@@ -125,7 +127,7 @@ namespace RandomQuestion
             if (shuffledQuestions == null) 
             {
                 MessageBox.Show("Apăi nicio întrebare nu s-o loadat! Verifică te rog amu' fișieru' cu întrebări!");
-                logger.Error("Get next question button was pressed, but questions were not previously loaded!");
+                logger?.Error("Get next question button was pressed, but questions were not previously loaded!");
                 return;
             }
 
