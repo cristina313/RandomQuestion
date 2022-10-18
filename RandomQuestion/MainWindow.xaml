@@ -7,7 +7,98 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="TitleBar"  Grid.Row="0" Margin="0, 0, 120, 0"
+                    Background="{StaticResource backgroundColor}"
+                    Orientation="Horizontal">
+            <Image Source="Assets/rq.gif"/>
+            <TextBlock Margin="10,0,0,0" Foreground="Beige" VerticalAlignment="Center" Text="{x:Bind Title}"/>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/qm.png" />
+            </Grid.Background>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="12*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Grid.Column="1" Name="questionGrid" Visibility="Visible">
+                    <Border BorderThickness="12" CornerRadius="7">
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="{StaticResource darkColor}" Opacity="0.6"/>
+                        </Border.BorderBrush>
+                    </Border>
+                    <Border BorderThickness="7" CornerRadius="7" Margin="2">
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="{StaticResource lightColor}" Opacity="0.2"/>
+                        </Border.BorderBrush>
+                    </Border>
+                    <Border BorderThickness="3" CornerRadius="7" Margin="4">
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="{StaticResource highlightColor}" Opacity="1"/>
+                        </Border.BorderBrush>
+                    </Border>
+
+                    <TextBlock Name="mainText" Text="" 
+                               TextWrapping="Wrap" 
+                               TextAlignment="Center"  
+                               Foreground="{StaticResource highlightColor}" FontSize="36" Margin="15" 
+                               HorizontalAlignment="Center" VerticalAlignment="Bottom">
+
+                    </TextBlock>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1" Width="Auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <ComboBox Grid.Row="0" FlowDirection="LeftToRight"  Height="60" Width="140"
+                          SelectedIndex="0" 
+                          Background="Transparent">
+
+                    <ComboBox.Items>
+                        <ComboBoxItem>
+                            <Image Source="Assets/ro.png" Width="100" Height="50" />
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Image Source="Assets/en.png" Width="100" Height="50" />
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Image Source="Assets/de.png" Width="100" Height="50" />
+                        </ComboBoxItem>
+                    </ComboBox.Items>
+                </ComboBox>
+                <Button Grid.Row="1"  
+                        Background="Transparent"
+                        HorizontalAlignment="Center">
+                    <Image Source="Assets/play.png" Width="100" Height="50"/>
+                </Button>
+                <Button Grid.Row="2" HorizontalAlignment="Right"
+                        Background="Transparent">
+                    <Image Source="Assets/settings.png" Width="60" Height="50"/>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
 </Window>

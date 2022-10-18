@@ -5,6 +5,10 @@
     xmlns:local="using:RandomQuestion">
     <Application.Resources>
         <ResourceDictionary>
+            <Color x:Key="backgroundColor">#010913</Color>
+            <Color x:Key="darkColor">DarkBlue</Color>
+            <Color x:Key="lightColor">LightBlue</Color>
+            <Color x:Key="highlightColor">AliceBlue</Color>
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
                 <!-- Other merged dictionaries here -->
