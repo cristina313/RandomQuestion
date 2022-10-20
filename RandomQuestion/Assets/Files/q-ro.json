@@ -1,0 +1,115 @@
+{
+  "_id": {
+    "$oid": "61745db705cac2f99cb7863f"
+  },
+  "Questions": [
+    {
+      "Text": "Care este skillul de care ești cel/cea mai mândru/ă?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Dacă ai putea păstra doar trei applicații pe telefon care ar fi acelea?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Cum îți place să-ți începi o zi de lucru?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Dacă ar fi să ajungi expert pe un anumit domeniu care ar fi acela?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "A fost vreo călătorie care te-a schimbat? Povestește-ne!",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Ce te-a făcut să zâmbești recent?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Care e cel mai bun sfat care ți-a fost dat și pe care ți-l amintești? :D",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Ce te relaxează cel mai mult după o zi super-busy?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Care este ce ultima chestie nouă pe care ai încercat-o? ",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Care este cel mai fain compliment pe care l-ai primit?  ",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Când erai copil ce-ți doreai să devi (când vei crește mare)?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Ai un talent ascuns? Care ar fi acela?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Strălucești, care e secretul? :D",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Dacă ai putea avea o super-putere care ar fi aceea?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Dacă ai putea alege o vârstă pe care să o ai permanent, ce vârstă ar fi?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Care ar fi trei cuvinte pe care prietenii tăi le-ar folosi să te descrie?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Dacă ai putea să mănânci o anumită chestie la FIECARE masă care ar fi aceea?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Care e un hobby care ți-ar plăcea să-l abordezi/dezvolți?  ",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Care ar fi un „must” în destinațiile de vacanță din viitor?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Care din treburile casei pe care le ai de făcut nu-ți place deloc?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Care e emoji-ul tău preferat?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Care este cel mai ciudat fel de mâncare pe care l-ai încercat?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Care ar fi un productivity-trick pe care îl folosești?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Night-owl sau early-bird?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Ce te obosește cel mai mult?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Ce îți plac mai mult: câinii sau pisicile?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Care este realizarea de care ești cel/cea mai mândru/ă?",
+      "Lang": "ro"
+    }
+  ]
+}
