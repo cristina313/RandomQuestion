@@ -1,0 +1,35 @@
+{
+  "_id": {
+    "$oid": "61745db705cac2f99cb7863f"
+  },
+  "Questions": [
+    {
+      "Text": "Care este skillul de care ești cel/cea mai mândru/ă?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Dacă ai putea păstra doar trei applicații pe telefon care ar fi acelea?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Cum îți place să-ți începi o zi de lucru?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Dacă ar fi să ajungi expert pe un anumit domeniu care ar fi acela?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "A fost vreo călătorie care te-a schimbat? Povestește-ne!",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Ce te-a făcut să zâmbești recent?",
+      "Lang": "ro"
+    },
+    {
+      "Text": "Ce te relaxează cel mai mult după o zi super-busy?",
+      "Lang": "ro"
+    }
+  ]
+}
