@@ -20,5 +20,11 @@ namespace RandomQuestion.Utils.Shuffling
             }
             return array;
         }
+
+        public static ArrayList PickUpSubArray(ArrayList array, int nrQuestions)
+        {
+            var i1 = random.Next(array.Count - nrQuestions);
+            return array.GetRange(i1, nrQuestions);
+        }
     }
 }
