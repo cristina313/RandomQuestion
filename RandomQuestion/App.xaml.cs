@@ -3,6 +3,7 @@ using Microsoft.Toolkit.Mvvm.DependencyInjection;
 using Microsoft.UI.Xaml;
 using RandomQuestion.Data;
 using RandomQuestion.Utils.Providers;
+using RandomQuestion.ViewModels;
 using System;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -23,6 +24,7 @@ namespace RandomQuestion
         {
             this.InitializeComponent();
             Ioc.Default.ConfigureServices(new ServiceCollection()
+                .AddSingleton<MainWindowViewModel>()
                 .AddTransient<IDataService, JsonFileService>()
                 .AddTransient<IQuestionsProvider, QuestionsFileProvider>()
                 .BuildServiceProvider());

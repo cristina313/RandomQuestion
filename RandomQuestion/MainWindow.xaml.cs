@@ -2,6 +2,7 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Media.Animation;
 using RandomQuestion.Utils;
+using RandomQuestion.ViewModels;
 using System;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -21,6 +22,8 @@ namespace RandomQuestion
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(TitleBar);
 
+            ViewModel = Ioc.Default.GetService<MainWindowViewModel>();
+            ViewModel.StartBlinking += Animation_StartBlinking;
         }
 
         private void Animation_StartBlinking()
@@ -39,5 +42,7 @@ namespace RandomQuestion
             Storyboard.SetTargetProperty(doubleAnimation, "Opacity");
             storyBoard.Begin();
         }
+
+        public MainWindowViewModel? ViewModel { get; }
     }
 }
