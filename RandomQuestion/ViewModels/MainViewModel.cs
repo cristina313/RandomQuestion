@@ -1,5 +1,7 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.DependencyInjection;
+using Microsoft.Toolkit.Mvvm.Input;
+using Microsoft.UI.Xaml;
 using RandomQuestion.Data;
 using RandomQuestion.Models;
 using RandomQuestion.Utils.Providers;
@@ -65,7 +67,7 @@ namespace RandomQuestion.ViewModels
         #region BackgroundWorker
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            
+            OnStartBlinking();
         }
 
         private void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -92,6 +94,39 @@ namespace RandomQuestion.ViewModels
         #region Properties
         [ObservableProperty]
         private string mainText = "...";
+
+        [ObservableProperty]
+        private Visibility qestionsVisible = Visibility.Collapsed;
+        #endregion
+
+        #region Commands
+        [ICommand]
+        public void Start()
+        {
+            QestionsVisible = Visibility.Visible;
+            backgroundWorker.RunWorkerAsync();
+        }
+        #endregion
+
+        #region Delegates
+        public delegate void BlinkCallback();
+        public event BlinkCallback StartBlinking;
+        public void OnStartBlinking()
+        {
+            if (StartBlinking != null)
+                StartBlinking.Invoke();
+
+            if (currentQ < shuffledQuestions.Count)
+            {
+                MainText = shuffledQuestions[currentQ].ToString();
+                currentQ++;
+            }
+            else
+            {
+                currentQ = 0;
+                Init();
+            }
+        }
         #endregion
     }
 }
