@@ -12,6 +12,8 @@
 		<EnableMsixTooling>true</EnableMsixTooling>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Content Remove="Assets\Files\q-de.json" />
+	  <Content Remove="Assets\Files\q-en.json" />
 	  <Content Remove="Assets\Files\q-ro.json" />
 	</ItemGroup>
 	<ItemGroup>
@@ -50,6 +52,12 @@
 		<ProjectCapability Include="Msix" />
 	</ItemGroup>
 	<ItemGroup>
+	  <None Update="Assets\Files\q-de.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Assets\Files\q-en.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	  <None Update="Assets\Files\q-ro.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>

@@ -9,6 +9,7 @@ using RandomQuestion.Utils.Shuffling;
 using System;
 using System.Collections;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Threading;
 
 namespace RandomQuestion.ViewModels
@@ -44,7 +45,7 @@ namespace RandomQuestion.ViewModels
         {
             var dirPath = $"{AppDomain.CurrentDomain.BaseDirectory}\\Assets\\Files\\";
             var qProvider = new QuestionsFileProvider(dataService, new QuestionsProviderOptions { DirectoryPath = dirPath });
-            questions = qProvider.GetQuestions(languages[languageIndex]);
+            questions = qProvider.GetQuestions(languages[LanguageIndex]);
             ArrayList gotQ = GetQuestionsArray();
             shuffledQuestions = ShuffleManager.Shuffle(gotQ);
         }
@@ -97,6 +98,19 @@ namespace RandomQuestion.ViewModels
 
         [ObservableProperty]
         private Visibility qestionsVisible = Visibility.Collapsed;
+
+        public int LanguageIndex
+        {
+            get { return languageIndex; }
+            set
+            {
+                SetProperty(ref languageIndex, value);
+                Debug.WriteLine(languages[languageIndex]);
+                QestionsVisible = Visibility.Collapsed;
+                Init();
+                
+            }
+        }
         #endregion
 
         #region Commands
