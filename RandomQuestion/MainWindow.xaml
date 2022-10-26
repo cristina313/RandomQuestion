@@ -93,7 +93,7 @@
                           FlowDirection="LeftToRight"  
                           Height="60" 
                           Width="140"
-                          SelectedIndex="0" 
+                          SelectedIndex="{x:Bind ViewModel.LanguageIndex, Mode=TwoWay}" 
                           Background="Transparent">
 
                     <ComboBox.Items>
