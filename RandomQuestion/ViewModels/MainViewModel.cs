@@ -8,6 +8,7 @@ using RandomQuestion.Utils.Providers;
 using RandomQuestion.Utils.Shuffling;
 using System;
 using System.Collections;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Threading;
@@ -19,6 +20,7 @@ namespace RandomQuestion.ViewModels
         private IDataService dataService;
         private QuestionsList questions;
         private int languageIndex = 0;
+        private ObservableCollection<string> questionsUsed = new ObservableCollection<string>();
         private ArrayList shuffledQuestions;
         private int currentQ;
         private string[] languages;
@@ -111,6 +113,15 @@ namespace RandomQuestion.ViewModels
                 
             }
         }
+
+        public ObservableCollection<string> QuestionsUsed
+        {
+            get { return questionsUsed; }
+            set
+            {
+                SetProperty(ref questionsUsed, value);
+            }
+        }
         #endregion
 
         #region Commands
@@ -118,6 +129,13 @@ namespace RandomQuestion.ViewModels
         public void Start()
         {
             QestionsVisible = Visibility.Visible;
+            
+            // add the previous question, when the play button is pressed again
+            if (currentQ > 0)
+            {
+                QuestionsUsed.Add(shuffledQuestions[currentQ - 1].ToString());
+            }
+
             backgroundWorker.RunWorkerAsync();
         }
         #endregion
