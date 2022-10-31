@@ -1,115 +1,250 @@
 {
-  "_id": {
-    "$oid": "61745db705cac2f99cb7863f"
-  },
-  "Questions": [
-    {
-      "Text": "de - Care este skillul de care ești cel/cea mai mândru/ă?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Dacă ai putea păstra doar trei applicații pe telefon care ar fi acelea?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Cum îți place să-ți începi o zi de lucru?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Dacă ar fi să ajungi expert pe un anumit domeniu care ar fi acela?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - A fost vreo călătorie care te-a schimbat? Povestește-ne!",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Ce te-a făcut să zâmbești recent?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Care e cel mai bun sfat care ți-a fost dat și pe care ți-l amintești? :D",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Ce te relaxează cel mai mult după o zi super-busy?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Care este ce ultima chestie nouă pe care ai încercat-o? ",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Care este cel mai fain compliment pe care l-ai primit?  ",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Când erai copil ce-ți doreai să devi (când vei crește mare)?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Ai un talent ascuns? Care ar fi acela?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Strălucești, care e secretul? :D",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Dacă ai putea avea o super-putere care ar fi aceea?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Dacă ai putea alege o vârstă pe care să o ai permanent, ce vârstă ar fi?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Care ar fi trei cuvinte pe care prietenii tăi le-ar folosi să te descrie?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Dacă ai putea să mănânci o anumită chestie la FIECARE masă care ar fi aceea?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Care e un hobby care ți-ar plăcea să-l abordezi/dezvolți?  ",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Care ar fi un „must” în destinațiile de vacanță din viitor?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Care din treburile casei pe care le ai de făcut nu-ți place deloc?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Care e emoji-ul tău preferat?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Care este cel mai ciudat fel de mâncare pe care l-ai încercat?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Care ar fi un productivity-trick pe care îl folosești?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Night-owl sau early-bird?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Ce te obosește cel mai mult?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Ce îți plac mai mult: câinii sau pisicile?",
-      "Lang": "de"
-    },
-    {
-      "Text": "de - Care este realizarea de care ești cel/cea mai mândru/ă?",
-      "Lang": "de"
-    }
-  ]
+	"_id": {
+		"$oid": "61745db705cac2f99cb7863f"
+	},
+	"questions": [{
+			"Text": "Auf welche Fähigkeit sind Sie besonders stolz?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wenn du nur drei Apps auf deinem Handy haben könntest, welche wären das?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wie beginnen Sie Ihren Arbeitstag am liebsten?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wenn Sie ein Experte auf einem bestimmten Gebiet werden würden, welches wäre das?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Gab es eine Reise, die Sie verändert hat? Erzählen Sie uns davon!",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was hat Sie kürzlich zum Lächeln gebracht?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was ist der beste Ratschlag, den Sie erhalten haben und an den Sie sich erinnern? :D ",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was entspannt Sie am meisten nach einem anstrengenden Tag?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was ist die letzte neue Sache, die du ausprobiert hast?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was ist das coolste Kompliment, das du je bekommen hast?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was wolltest du als Kind werden (wenn du groß bist)?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Hast du ein verborgenes Talent? Welches wäre das?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Du strahlst, was ist dein Geheimnis? :D ",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wenn du eine Superkraft haben könntest, welche wäre das?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wenn du dir ein Alter aussuchen könntest, in dem du ewig lebst, welches wäre es?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Mit welchen drei Worten würden dich deine Freunde beschreiben?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wenn du zu JEDER Mahlzeit etwas Bestimmtes essen könntest, was wäre das?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Welches Hobby würdest du gerne ausüben/entwickeln?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was wäre ein 'Muss' in zukünftigen Urlaubszielen?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Welche der Hausarbeiten, die Sie erledigen müssen, mögen Sie wirklich nicht?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was ist Ihr Lieblingsemoji?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Welches ist das seltsamste Essen, das du je probiert hast?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was ist ein Produktivitäts-Trick, den Sie anwenden?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Nachtschwärmer oder Frühaufsteher?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was nervt Sie am meisten?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was magst du mehr: Hunde oder Katzen?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Auf welche Leistung sind Sie am meisten stolz?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wenn Ihr 15-jähriges Ich Sie heute sehen könnte, was würde es denken?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Tee, Kaffee, Wein oder Tequila?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was würdest du nie jemandem erzählen, außer einem völlig Fremden, den du nie wieder sehen wirst?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Welches ist dein Lieblings-Duschlied?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was ist der beste Ratschlag, den dir jemand gegeben hat?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wie würde dich dein bester Freund beschreiben?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Welche 2 Personen würdest du gerne mal treffen, tot oder lebendig, und warum?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wofür geben Sie zu viel Geld aus?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was magst du auf deiner Pizza?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was ist etwas, das dir Angst macht, das du aber trotzdem gerne tust?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was findest du am attraktivsten an einem Menschen?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was ist deine Vorstellung von einem perfekten Tag?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Bist du ein Fan von großen Partys oder nicht?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Eiscreme oder gefrorener Joghurt?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was befindet sich gerade in deinem Kühlschrank?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Lichter an oder aus?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Von was (oder wem) sind Sie am meisten besessen?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Winter oder Sommer?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wodurch verlieren Sie Ihre Konzentration?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Sind Sie ein Morgenmensch oder ein Nachtschwärmer?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Bevorzugen Sie einen Strandurlaub oder eine Städtereise?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Oder doch lieber eine Reise aufs Land?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Worüber sind Sie ein Snob?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was macht Sie einzigartig?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wenn deine Freunde dich mit einem Wort beschreiben könnten, wie würde es lauten?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Nenne mir eine lustige Tatsache über dich ...",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wo siehst du dich in zehn Jahren?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wofür interessieren Sie sich am meisten?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wo sind Sie am glücklichsten?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Worauf sind Sie im Leben am meisten stolz?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was ist das schlimmste Geschenk, das du je bekommen hast?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Wie waren Sie als Kind?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Hast du in letzter Zeit einen guten Film gesehen?",
+			"Lang": "de"
+		},
+		{
+			"Text": "Was ist deine Lieblingsserie auf Netflix und warum?",
+			"Lang": "de"
+		}
+	]
 }
