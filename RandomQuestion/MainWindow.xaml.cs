@@ -1,5 +1,6 @@
 ﻿using Microsoft.Toolkit.Mvvm.DependencyInjection;
 using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Animation;
 using RandomQuestion.Utils;
 using RandomQuestion.ViewModels;
@@ -44,5 +45,12 @@ namespace RandomQuestion
         }
 
         public MainWindowViewModel? ViewModel { get; }
+
+        // event added so that the listview will be
+        // automatically scrolled at the last added item in the list
+        private void questionListView_ContainerContentChanging(ListViewBase sender, ContainerContentChangingEventArgs args)
+        {
+            (sender as ListView).ScrollIntoView(questionListView.Items[questionListView.Items.Count - 1]);
+        }
     }
 }

@@ -40,14 +40,39 @@
                     <ColumnDefinition Width="12*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
                     <RowDefinition Height="4*"/>
-                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="4*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="1" 
+                <ListView Grid.Row="1" 
+                          Grid.RowSpan="2"
                       Grid.Column="1" 
-                      Name="questionGrid" 
-                      Visibility="{x:Bind ViewModel.QestionsVisible, Mode=TwoWay}">
+                      Name="questionListView" 
+                      Visibility="{x:Bind ViewModel.QestionsVisible, Mode=TwoWay}"
+                      ItemsSource="{x:Bind ViewModel.QuestionsUsed, Mode=TwoWay}"
+                      ContainerContentChanging="questionListView_ContainerContentChanging">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" 
+                               TextWrapping="Wrap" 
+                               TextAlignment="Center"  
+                               Foreground="{StaticResource highlightColor}" 
+                               FontSize="22"
+                               Margin="15" 
+                               HorizontalAlignment="Center"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.Resources>
+                        <ResourceDictionary>
+                            <Style TargetType="ListView">
+                                <Setter Property="Foreground" Value="{StaticResource highlightColor}" />
+                                <Setter Property="HorizontalAlignment" Value="Center" />
+                                <Setter Property="VerticalAlignment" Value="Center" />
+                            </Style>
+                        </ResourceDictionary>
+                    </ListView.Resources>
                     <Border BorderThickness="12" 
                             CornerRadius="7">
                         <Border.BorderBrush>
@@ -70,17 +95,19 @@
                                              Opacity="1"/>
                         </Border.BorderBrush>
                     </Border>
+                </ListView>
 
-                    <TextBlock Name="mainText" 
-                               Text="{x:Bind Path=ViewModel.MainText, Mode=TwoWay}" 
-                               TextWrapping="Wrap" 
-                               TextAlignment="Center"  
-                               Foreground="{StaticResource highlightColor}" 
-                               FontSize="36" Margin="15" 
-                               HorizontalAlignment="Center" 
-                               VerticalAlignment="Bottom">
-                    </TextBlock>
-                </Grid>
+                <TextBlock Name="mainText"
+                           Grid.Row="3" 
+                           Grid.Column="1" 
+                           Text="{x:Bind Path=ViewModel.MainText, Mode=TwoWay}" 
+                           TextWrapping="Wrap" 
+                           TextAlignment="Center"  
+                           Foreground="{StaticResource highlightColor}" 
+                           FontSize="36" Margin="15" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Bottom">
+                </TextBlock>
             </Grid>
             <Grid Grid.Row="1" Width="Auto">
                 <Grid.ColumnDefinitions>
