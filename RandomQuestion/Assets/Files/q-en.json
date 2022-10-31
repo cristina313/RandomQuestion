@@ -1,115 +1,250 @@
-{
-  "_id": {
-    "$oid": "61745db705cac2f99cb7863f"
-  },
-  "Questions": [
-    {
-      "Text": "en - Care este skillul de care ești cel/cea mai mândru/ă?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Dacă ai putea păstra doar trei applicații pe telefon care ar fi acelea?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Cum îți place să-ți începi o zi de lucru?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Dacă ar fi să ajungi expert pe un anumit domeniu care ar fi acela?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - A fost vreo călătorie care te-a schimbat? Povestește-ne!",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Ce te-a făcut să zâmbești recent?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Care e cel mai bun sfat care ți-a fost dat și pe care ți-l amintești? :D",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Ce te relaxează cel mai mult după o zi super-busy?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Care este ce ultima chestie nouă pe care ai încercat-o? ",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Care este cel mai fain compliment pe care l-ai primit?  ",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Când erai copil ce-ți doreai să devi (când vei crește mare)?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Ai un talent ascuns? Care ar fi acela?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Strălucești, care e secretul? :D",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Dacă ai putea avea o super-putere care ar fi aceea?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Dacă ai putea alege o vârstă pe care să o ai permanent, ce vârstă ar fi?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Care ar fi trei cuvinte pe care prietenii tăi le-ar folosi să te descrie?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Dacă ai putea să mănânci o anumită chestie la FIECARE masă care ar fi aceea?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Care e un hobby care ți-ar plăcea să-l abordezi/dezvolți?  ",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Care ar fi un „must” în destinațiile de vacanță din viitor?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Care din treburile casei pe care le ai de făcut nu-ți place deloc?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Care e emoji-ul tău preferat?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Care este cel mai ciudat fel de mâncare pe care l-ai încercat?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Care ar fi un productivity-trick pe care îl folosești?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Night-owl sau early-bird?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Ce te obosește cel mai mult?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Ce îți plac mai mult: câinii sau pisicile?",
-      "Lang": "en"
-    },
-    {
-      "Text": "en - Care este realizarea de care ești cel/cea mai mândru/ă?",
-      "Lang": "en"
-    }
-  ]
-}
+ 	{
+ 		"_id": {
+ 			"$oid": "61745db705cac2f99cb7863f"
+ 		},
+ 		"questions": [{
+ 				"Text": "Which skill are you most proud of?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "If you could only keep three apps on your phone what would they be?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "How do you like to start your work day?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "If you were to become an expert in a particular field, what would it be?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Was there a journey that changed you? Tell us about it!",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What made you smile recently?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What is the best piece of advice you have been given that you remember? :D",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What relaxes you the most after a super-busy day?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What's the last new thing you tried? ",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What's the coolest compliment you've ever received?  ",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "When you were a child, what did you want to be (when you grew up)?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Do you have a hidden talent? What would that be?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "You shine, what's the secret? :D",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "If you could have a superpower, what would it be?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "If you could choose an age to have permanently, what age would it be?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What are three words your friends would use to describe you?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "If you could eat a certain thing at EVERY meal what would it be?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What is a hobby you would like to take up/develop?  ",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What would be a 'must' in future holiday destinations?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Which of the house chores you have to do do you really dislike?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What's your favorite emoji?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What is the weirdest food you've ever tried?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What would be a productivity-trick you use?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Night-owl or early-bird?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What tires you most?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What do you like more: dogs or cats?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Which achievement are you most proud of?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "If your 15-year-old self could see you today, what would they think?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Tea, coffee, wine, or tequila?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What’s something you would never tell anyone but a total stranger you’ll never meet again?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What’s your go-to shower song?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What’s the best advice anyone has given you?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "How would your best friend describe you?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What 2 people would you like to meet dead or alive and why?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "On what do you spend too much money?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What do you like on your pizza?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What is something that scares you, but you like to do anyway?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What do you find the most attractive in a person?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What’s your idea of a perfect day?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Are you a fan of huge parties or nah?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Ice cream or frozen yogurt?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What’s in your refrigerator right now?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Lights on or off?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What (or who) are you most obsessive about?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Winter or summer?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What causes you to lose your focus?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Are you a morning person or a night owl?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Do you prefer a beach vacation or a city break?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Or even a trip to the countryside ? ",
+ 				"Lang ": "en"
+ 			},
+ 			{
+ 				"Text": "What are you a snob about?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What makes you unique?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "If your friends could describe you in one word, what would it be?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Tell me a fun fact about you …",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Where do you see yourself in ten years' time?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What are you most passionate about?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Where’s your happy place?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What are you most proud of in life?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What’s the worst present anyone ever gave you?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What were you like as a kid?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "Seen any good movies lately?",
+ 				"Lang": "en"
+ 			},
+ 			{
+ 				"Text": "What is you favorite Netflix show and why?",
+ 				"Lang": "en"
+ 			}
+ 		]
+ 	}
